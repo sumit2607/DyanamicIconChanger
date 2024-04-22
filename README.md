@@ -1,4 +1,4 @@
-# VideoCallApp
+# App Logo Changer
 
 Welcome to **My Video Call App**! This repository hosts the source code for an amazing Android app that.
 
