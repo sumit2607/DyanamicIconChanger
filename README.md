@@ -37,8 +37,6 @@ implementation libs.androidx.core.ktx
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.intuit.sdp:sdp-android:1.1.1'
 
-![GitHub Cards Preview](https://github.com/sumit2607/MovieAppWithMvvm/blob/master/my.png)
-[![Video](https://media1.giphy.com/media/WFmjWifrj9DJ50YaXj/giphy.gif?cid=6c09b952b3ef2d1b4axosobnuz99n7vcpr08zksixy2y3vei&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g)](https://www.youtube.com/watch?v=IBehkPiW40s&ab_channel=AndroidCoder)
 
 
 ## Contributing
