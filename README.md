@@ -10,10 +10,7 @@ App logo changer | By using this app uou can change app logo eassly | Android, K
 
 ## Features
 
-- Conncet People with Live Stream and Video call
-- Login with google securly
-- Voice calling
-- Video feed like tik tok
+- user can easily change app logo
 
 ## Getting Started
 
