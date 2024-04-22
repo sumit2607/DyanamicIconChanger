@@ -1,0 +1,33 @@
+<!-- custom_dialog.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@mipmap/ic_launcher_new_no"
+        android:onClick="onClick" />
+
+    <ImageView
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@mipmap/ic_launcher"
+        android:onClick="onClick" />
+
+    <ImageView
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:onClick="onClick"
+        android:src="@drawable/ic_launcher_new_no_background_no"
+        android:visibility="gone" />
+
+</LinearLayout>
