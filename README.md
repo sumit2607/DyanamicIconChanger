@@ -38,7 +38,7 @@ implementation libs.androidx.core.ktx
     implementation 'com.intuit.sdp:sdp-android:1.1.1'
 
 
-![GitHub Cards Preview](https://github.com/sumit2607/MovieAppWithMvvm/blob/master/f1.png)
+![GitHub Cards Preview](https://github.com/sumit2607/DyanamicIconChanger/blob/master/f1.png)
 
 
 ## Contributing
