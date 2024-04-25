@@ -45,56 +45,15 @@ class MainActivity : AppCompatActivity() {
             timer.scheduleAtFixedRate(SliderTimerTask(), 3000, 3000)
 
 
-
-
         }
 
         clickAction()
     }
 
 
-
     private fun clickAction() {
         binding.apply {
-//            changeIcon.setOnClickListener {
-//                packageManager?.setComponentEnabledSetting(
-//                    ComponentName(
-//                        applicationContext.packageName,
-//                        applicationContext.packageName + ".MainActivityAlias1"
-//                    ),
-//                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP
-//                )
-//
-//                packageManager?.setComponentEnabledSetting(
-//                    ComponentName(
-//                        applicationContext.packageName,
-//                        applicationContext.packageName + ".MainActivityAlias2"
-//                    ),
-//                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
-//                )
-//
-//            }
-//
-//
-//            changeIcon2.setOnClickListener {
-//                packageManager?.setComponentEnabledSetting(
-//                    ComponentName(
-//                        applicationContext.packageName,
-//                        applicationContext.packageName + ".MainActivityAlias1"
-//                    ),
-//                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
-//                )
-//
-//                packageManager?.setComponentEnabledSetting(
-//                    ComponentName(
-//                        applicationContext.packageName,
-//                        applicationContext.packageName + ".MainActivityAlias2"
-//                    ),
-//                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP
-//                )
-//            }
             infoIcon.setOnClickListener {
-
                 showPremiumDialog()
             }
         }
@@ -125,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         builder.setPositiveButton("Claim Offer") { dialog, which ->
             // Handle claim offer action here (e.g., navigate to upgrade screen)
             // For demonstration, we'll just show a toast message
-         //   showToast(context, "Redirecting to claim offer...")
+            //   showToast(context, "Redirecting to claim offer...")
 
 
             showImageButtonDialog()
@@ -178,7 +137,35 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleImageButtonClick(context: Any, s: String) {
 
-        if (s.equals("Button 1")){
+        if (s == "Button 1") {
+            Toast.makeText(this, "App icon changed successfully ", Toast.LENGTH_SHORT).show()
+            packageManager?.setComponentEnabledSetting(
+                ComponentName(
+                    applicationContext.packageName,
+                    applicationContext.packageName + ".MainActivityAlias1"
+                ),
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP
+            )
+
+            packageManager?.setComponentEnabledSetting(
+                ComponentName(
+                    applicationContext.packageName,
+                    applicationContext.packageName + ".MainActivityAlias2"
+                ),
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
+
+
+            )
+
+            packageManager?.setComponentEnabledSetting(
+                ComponentName(
+                    applicationContext.packageName,
+                    applicationContext.packageName + ".MainActivityAlias3"
+                ),
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
+            )
+
+        } else if (s.equals("Button 2")) {
             Toast.makeText(this, "App icon changed successfully ", Toast.LENGTH_SHORT).show()
             packageManager?.setComponentEnabledSetting(
                 ComponentName(
@@ -195,24 +182,40 @@ class MainActivity : AppCompatActivity() {
                 ),
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP
             )
-        }else{
+
+            packageManager?.setComponentEnabledSetting(
+                ComponentName(
+                    applicationContext.packageName,
+                    applicationContext.packageName + ".MainActivityAlias3"
+                ),
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
+            )
+
+        } else {
             Toast.makeText(this, "App icon changed successfully ", Toast.LENGTH_SHORT).show()
             packageManager?.setComponentEnabledSetting(
-                    ComponentName(
-                        applicationContext.packageName,
-                        applicationContext.packageName + ".MainActivityAlias1"
-                    ),
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP
-                )
+                ComponentName(
+                    applicationContext.packageName,
+                    applicationContext.packageName + ".MainActivityAlias1"
+                ),
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
+            )
 
-                packageManager?.setComponentEnabledSetting(
-                    ComponentName(
-                        applicationContext.packageName,
-                        applicationContext.packageName + ".MainActivityAlias2"
-                    ),
-                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
-                )
+            packageManager?.setComponentEnabledSetting(
+                ComponentName(
+                    applicationContext.packageName,
+                    applicationContext.packageName + ".MainActivityAlias2"
+                ),
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
+            )
 
+            packageManager?.setComponentEnabledSetting(
+                ComponentName(
+                    applicationContext.packageName,
+                    applicationContext.packageName + ".MainActivityAlias3"
+                ),
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP
+            )
         }
 
     }
@@ -234,7 +237,7 @@ class MainActivity : AppCompatActivity() {
     inner class SliderTimerTask : TimerTask() {
         override fun run() {
             runOnUiThread {
-               binding.viewPager.currentItem = (binding.viewPager.currentItem + 1) % images.size
+                binding.viewPager.currentItem = (binding.viewPager.currentItem + 1) % images.size
             }
         }
     }
